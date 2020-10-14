@@ -1,29 +1,24 @@
-import React, { useState }from 'react';
-import {
-  SafeAreaView,
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  Button,
-} from 'react-native';
-
+mport React, { useState } from 'react';
+import { SafeAreaView, View, Text, Button } from 'react-native';
 
 const App = (props) => {
-  const [counter, setCounter] = useState(0);
+    //       var,   function
+    const [counter, setCounter] = useState(0);
 
-  return (
-    <SafeAreaView>
-      <View>
-        <Text style={{ fontSize: 250}}>{counter}</Text>
+    console.log("Render component..");
 
-        <Button 
-            title="Up!"
-            onPress={ () => setCounter(counter + 1)}
-        />
-      </View>
-    </SafeAreaView>
-  );
-};
+    return (
+        <SafeAreaView>
+            <View>
+                <Text style={{ fontSize: 250 }}>{counter}</Text>
+
+                <Button
+                    title="Up!"
+                    onPress={() => setCounter(1)}
+                />
+            </View>
+        </SafeAreaView>
+    )
+}
 
 export default App;
