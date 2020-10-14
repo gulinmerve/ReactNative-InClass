@@ -1,4 +1,4 @@
-mport React, { useState } from 'react';
+import React, { useState } from 'react';
 import { SafeAreaView, View, Text, Button } from 'react-native';
 
 const App = (props) => {
