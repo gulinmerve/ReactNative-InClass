@@ -1,20 +1,21 @@
 // Overall - 1
 import React from 'react';
-import { SafeAreaView, View, Text, Alert } from 'react-native';
-
-import InputPanel from './components/InputPanel';
-
+import { SafeAreaView, View, Text, FlatList } from 'react-native';
+import proudctData from './product_data.json'
+import { ProductCard } from './components'
 const App = () => {
+    const renderListItem = ({ item }) => <ProductCard product={item} />
     return (
         <SafeAreaView>
             <View>
-                <Text style={{ fontSize: 50 }}>Hello World</Text>
+                <FlatList
+                    keyExtractor={(_, index) => index.toString()}
+                    data={proudctData}
+                    renderItem={renderListItem}
+                    numColumns={2}
+                />
             </View>
-
-            <InputPanel />
-
         </SafeAreaView>
     )
 }
-
 export default App;
